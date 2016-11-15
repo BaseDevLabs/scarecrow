@@ -1,5 +1,4 @@
 # Scarecrow Admin Panel
-======
 
 Scarecrow admin panel is a very simple html admin panel template.  It is based off of the old Gitlab design.  
 
@@ -27,7 +26,7 @@ The avatar was designed specifically with Gravatar in mind.  Other ways of doing
 ## Requirements
 
   * JQuery 3.1.1 +
-  * (nicescroll 3.6.8 +)[http://nicescroll.areaaperta.com/]
+  * [nicescroll 3.6.8 +](http://nicescroll.areaaperta.com/)
 
 
 ## More Information
