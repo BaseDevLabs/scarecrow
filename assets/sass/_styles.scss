@@ -1,0 +1,300 @@
+@function em($pixels, $base) {
+  @return #{$pixels/$base}em
+}
+
+
+@function rem($pixels, $base) {
+  @return #{$pixels/$base}rem
+}
+
+
+@mixin sidebar-header-icon-full { font-size: rem(36, $base-font-size); color: $header-font-color; vertical-align: middle; line-height: rem(57, $base-font-size); box-sizing: border-box; padding-left:rem(20, $base-font-size)}
+
+@mixin sidebar-header-text-full { box-sizing: border-box; padding-left: rem(5, $base-font-size); font-family: $font-family; }
+
+@mixin gravatar-image-min { width: 80%; box-sizing: border-box; padding-left: rem(5, $base-font-size); padding-right: rem(5, $base-font-size) }
+
+@mixin username-text  { text-decoration: none; color: #c5d0de; font-family: $font-family; box-sizing: border-box; font-size: rem(16, $base-font-size); line-height: rem(18, $base-font-size); }
+
+.sidebar {
+  display: table-cell;
+  background-color: $sidebar-bg-color;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar-default,
+.sidebar-default .sidebar-header,
+.sidebar-default .sidebar-user,
+.sidebar-default .sidebar-menu,
+.sidebar-default .sidebar-collapse {
+  width: rem($sidebar-min-width, $base-font-size);
+  transition-duration: .3s;
+  overflow: hidden
+}
+
+.sidebar-active,
+.sidebar-active .sidebar-header,
+.sidebar-active .sidebar-user,
+.sidebar-active .sidebar-menu,
+.sidebar-active .sidebar-collapse {
+  width: rem($sidebar-full-width, $base-font-size);
+  transition-duration: .3s;
+  overflow: hidden
+}
+
+.sidebar-header {
+  display: block;
+  height: rem(57, $base-font-size);
+  background-color: lighten($sidebar-bg-color, 5%);
+  overflow: hidden
+}
+
+.sidebar-header> a {
+  display: block;
+  color: #c5d0de;
+  text-decoration: none;
+  font-family: $font-family;
+  font-size: rem(19, $base-font-size);
+  vertical-align: middle;
+}
+
+.sidebar-default .sidebar-header> a> span {
+  display: none
+}
+
+.sidebar-default .sidebar-header> a> i {
+  @include sidebar-header-icon-full;
+  padding-left: rem(15, $base-font-size)
+}
+
+.sidebar-active .sidebar-header> a> i {
+  @include sidebar-header-icon-full;
+}
+
+.sidebar-active .sidebar-header> a> span {
+  @include sidebar-header-text-full;
+}
+
+.sidebar-user {
+  display: block;
+  margin-top: rem(30, $base-font-size);
+  text-align: center;
+  border-bottom: 1px solid lighten($sidebar-bg-color, 15%);
+  box-szing: border-box;
+}
+
+.sidebar-user> div~ div {
+  margin-top: rem(10, $base-font-size);
+  padding-bottom: rem(15, $base-font-size)
+}
+
+.gravatar> a> img {
+  border-radius: 50%;
+}
+
+.sidebar-default .gravatar> a> img {
+  @include gravatar-image-min
+}
+
+.sidebar-active .gravatar> a> img {
+  width: auto;
+  padding: 0
+}
+
+.sidebar-default .username> a {
+  display: none
+}
+
+.sidebar-active .username> a {
+  @include username-text
+}
+
+.sidebar-menu {
+  display: block;
+}
+
+.sidebar-menu> .full {
+  overflow: hidden;
+  transition-duration: .3s;
+  padding-left: 0;
+}
+
+.sidebar-menu> .full> li {
+  display: block
+}
+
+.sidebar-menu> .full> li> a {
+  font-family: $font-family;
+  color: #c5d0de;
+  text-decoration: none;
+  padding: rem(7, $base-font-size) rem(15, $base-font-size) rem(7, $base-font-size) rem(22, $base-font-size);
+  box-sizing: border-box;
+  display: block
+}
+
+.sidebar-menu> .full> li> a:hover {
+  background-color: lighten($sidebar-bg-color, 5%)
+}
+
+.sidebar-menu> .full> li> a> i {
+  font-size: rem(18, $base-font-size);
+  vertical-align: middle;
+  margin-right: rem(13, $base-font-size)
+}
+
+.sidebar-menu> .full> li> a> span {
+  font-size: rem(16, $base-font-size);
+  vertical-align: middle;
+  display: none;
+}
+
+.sidebar-default .sidebar-menu> .full> li> a> span {
+  display: none
+}
+
+.sidebar-active .sidebar-menu> .full> li> a> span {
+  display: inline
+}
+
+.sidebar-collapse> a> i {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: rem(13, $base-font-size);
+  background: lighten($sidebar-bg-color, 5%);
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  color: #c5d0de;
+}
+
+.sidebar-default .sidebar-collapse> a> .left {
+  visibility: hidden;
+}
+
+.sidebar-active .sidebar-collapse> a> .right {
+  visibility: hidden;
+}
+
+.sidebar-default .sidebar-collapse> a> .right {
+  visibility: visible;
+}
+
+.sidebar-active .sidebar-collapse> a> .left {
+  visibility: visible;
+}
+
+.sidebar-default .sidebar-collapse> a> i {
+  width: rem($sidebar-min-width, $base-font-size);
+  transition-duration: .3s;
+  overflow: hidden
+}
+
+.sidebar-active .sidebar-collapse> a> i {
+  width: rem($sidebar-full-width, $base-font-size);
+  transition-duration: .3s;
+  overflow: hidden
+}
+
+.content-default {
+  margin-left: rem($sidebar-min-width, $base-font-size)
+}
+
+.content-active {
+  margin-left: rem($sidebar-full-width, $base-font-size)
+}
+
+.content-active,
+.content-default {
+  box-sizing: border-box;
+  padding: 4rem 1rem 0 1rem;
+}
+
+@media (min-width: $collapse-size) {
+  .sidebar-default,
+  .sidebar-default .sidebar-header,
+  .sidebar-default .sidebar-user,
+  .sidebar-default .sidebar-menu,
+  .sidebar-default .sidebar-collapse,
+  {
+    width: rem($sidebar-full-width, $base-font-size);
+    transition-duration: .3s;
+    overflow: hidden
+  }
+  .sidebar-active,
+  .sidebar-active .sidebar-header,
+  .sidebar-active .sidebar-user,
+  .sidebar-active .sidebar-menu,
+  .sidebar-active .sidebar-collapse,
+  {
+    width: rem($sidebar-min-width, $base-font-size);
+    transition-duration: .3s;
+    overflow: hidden
+  }
+  .sidebar-default .sidebar-header> a> i {
+    @include sidebar-header-icon-full;
+  }
+  .sidebar-default .sidebar-header> a> span {
+    @include sidebar-header-text-full;
+    display: inline;
+  }
+  .sidebar-active .sidebar-header> a> span {
+    display: none
+  }
+  .sidebar-active .sidebar-header> a> i {
+    padding-left: rem(15, $base-font-size)
+  }
+  .sidebar-default .gravatar> a> img {
+    width: auto;
+    padding: 0
+  }
+  .sidebar-default .username> a {
+    @include username-text;
+    display: inline;
+  }
+  .sidebar-active .gravatar> a> img {
+    @include gravatar-image-min
+  }
+  .sidebar-active .username> a {
+    display: none
+  }
+  .sidebar-default .sidebar-menu> .full> li> a> span {
+    display: inline;
+  }
+  .sidebar-active .sidebar-menu> .full> li> a> span {
+    display: none;
+  }
+  .sidebar-default .sidebar-collapse> a> i {
+    width: rem($sidebar-full-width, $base-font-size);
+    transition-duration: .3s;
+    overflow: hidden
+  }
+  .sidebar-active .sidebar-collapse> a> i {
+    width: rem($sidebar-min-width, $base-font-size);
+    transition-duration: .3s;
+    overflow: hidden
+  }
+  .sidebar-active .sidebar-collapse> a> .left {
+    visibility: hidden;
+  }
+  .sidebar-default .sidebar-collapse> a> .right {
+    visibility: hidden;
+  }
+  .sidebar-active .sidebar-collapse> a> .right {
+    visibility: visible;
+  }
+  .sidebar-default .sidebar-collapse> a> .left {
+    visibility: visible;
+  }
+  .content-active {
+    margin-left: rem($sidebar-min-width, $base-font-size)
+  }
+  .content-default {
+    margin-left: rem($sidebar-full-width, $base-font-size)
+  }
+}
