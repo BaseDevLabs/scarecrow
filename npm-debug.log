@@ -1,0 +1,119 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', '.' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/cabox/workspace/admin-panel',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/cabox/.npm correctMkdir not in flight; initializing
+10 info lifecycle @basedevlabs/scarecrowadmin@0.1.1~prepublish: @basedevlabs/scarecrowadmin@0.1.1
+11 silly lifecycle @basedevlabs/scarecrowadmin@0.1.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package.tgz',
+12 verbose tar pack   '/home/cabox/workspace/admin-panel' ]
+13 verbose tarball /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package.tgz
+14 verbose folder /home/cabox/workspace/admin-panel
+15 verbose addLocalTarball adding from inside cache /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package.tgz
+16 verbose correctMkdir /home/cabox/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @basedevlabs/scarecrowadmin@0.1.1
+18 verbose afterAdd /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/cabox/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package/package.json written
+21 silly publish { name: '@basedevlabs/scarecrowadmin',
+21 silly publish   version: '0.1.1',
+21 silly publish   description: 'Scarecrow admin panel is a very simple html admin panel template.  It is based off of the old Gitlab design.',
+21 silly publish   author: { name: 'Matthew Shealy' },
+21 silly publish   license: 'MIT',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/BaseDevLabs/scarecrow.git' },
+21 silly publish   devDependencies:
+21 silly publish    { gulp: '^3.9.1',
+21 silly publish      'gulp-autoprefixer': '^3.1.1',
+21 silly publish      'gulp-copy': '0.0.2',
+21 silly publish      'gulp-rename': '^1.2.2',
+21 silly publish      'gulp-sass': '^2.3.2' },
+21 silly publish   dependencies:
+21 silly publish    { jquery: '^3.1.1',
+21 silly publish      'jquery.nicescroll': '^3.6.8',
+21 silly publish      'normalize.css': '^5.0.0' },
+21 silly publish   readme: '# Scarecrow Admin Panel\n\nScarecrow admin panel is a very simple html admin panel template.  It is based off of the old Gitlab design.  \n\nCurrently it only includes the responsive menu, that contains only top level links.\n\nExpect a rewrite of the SASS at some point.\n\n```\nassets/sass\n```\nContains the SASS for compiling.\n\n```\nhtml/stylesheets\n```\nContains the compiled stylesheets.Contains\n\n```\nhtml/index.html\n```\nDemo of how to layout the site as well as small javascript snippet that needs to be added to your project for the menu to work.\n\nThe avatar was designed specifically with Gravatar in mind.  Other ways of doing it may work.\n\n## Requirements\n\n  * JQuery 3.1.1 +\n  * [nicescroll 3.6.8 +](http://nicescroll.areaaperta.com/)\n\n\n## More Information\n\nStyles to be added:\n\n  * Login Page\n  * DataTables\n  * Tables\n  * Accordion links on the responsive menu\n  * Forms\n  \nTested on:\n\n  * Current Chromium\n  * Current Firefox\n  * Firefox Mobile\n  * Chrome Mobile',
+21 silly publish   readmeFilename: 'readme.md',
+21 silly publish   gitHead: '1f25689af821b3562d328d38017fa978cae2fc58',
+21 silly publish   bugs: { url: 'https://github.com/BaseDevLabs/scarecrow/issues' },
+21 silly publish   homepage: 'https://github.com/BaseDevLabs/scarecrow#readme',
+21 silly publish   _id: '@basedevlabs/scarecrowadmin@0.1.1',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: 'c7162009f16e328950a798526983f274cc6d0581',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @basedevlabs/scarecrowadmin
+24 silly mapToRegistry scope (from package name) @basedevlabs
+25 verbose mapToRegistry no registry URL found in name for scope @basedevlabs
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: '@basedevlabs/scarecrowadmin',
+28 silly mapToRegistry   scope: '@basedevlabs',
+28 silly mapToRegistry   escapedName: '@basedevlabs%2fscarecrowadmin',
+28 silly mapToRegistry   name: '@basedevlabs/scarecrowadmin',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/@basedevlabs%2fscarecrowadmin
+30 verbose publish registryBase https://registry.npmjs.org/
+31 silly publish uploading /home/cabox/.npm/@basedevlabs/scarecrowadmin/0.1.1/package.tgz
+32 verbose request uri https://registry.npmjs.org/@basedevlabs%2fscarecrowadmin
+33 verbose request sending authorization for write operation
+34 info attempt registry request try #1 at 6:17:35 PM
+35 verbose request using bearer token for auth
+36 verbose request id e4d0bcc3d10874d2
+37 http request PUT https://registry.npmjs.org/@basedevlabs%2fscarecrowadmin
+38 http 404 https://registry.npmjs.org/@basedevlabs%2fscarecrowadmin
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '21',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Tue, 15 Nov 2016 23:17:35 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-sjc3639-SJC',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1479251855.173360,VS0,VE328' }
+40 verbose request invalidating /home/cabox/.npm/registry.npmjs.org/_40basedevlabs_252fscarecrowadmin on PUT
+41 error publish Failed PUT 404
+42 verbose stack Error: Not found : @basedevlabs/scarecrowadmin
+42 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+42 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+42 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+42 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:200:22)
+42 verbose stack     at emitTwo (events.js:106:13)
+42 verbose stack     at Request.emit (events.js:191:7)
+42 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+42 verbose stack     at emitOne (events.js:101:20)
+42 verbose stack     at Request.emit (events.js:188:7)
+42 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:988:12)
+43 verbose statusCode 404
+44 verbose pkgid @basedevlabs/scarecrowadmin
+45 verbose cwd /home/cabox/workspace/admin-panel
+46 error Linux 2.6.32-042stab112.15
+47 error argv "/usr/bin/node" "/usr/bin/npm" "publish" "."
+48 error node v6.5.0
+49 error npm  v3.10.3
+50 error code E404
+51 error 404 Not found : @basedevlabs/scarecrowadmin
+52 error 404
+53 error 404 '@basedevlabs/scarecrowadmin' is not in the npm registry.
+54 error 404 You should bug the author to publish it (or use the name yourself!)
+55 error 404 Note that you can also install from a
+56 error 404 tarball, folder, http url, or git url.
+57 verbose exit [ 1, true ]
