@@ -27,7 +27,7 @@ The avatar was designed specifically with Gravatar in mind.  Other ways of doing
 
   * JQuery 3.1.1 +
   * [nicescroll 3.6.8 +](http://nicescroll.areaaperta.com/)
-  * Normalize
+  * Normalize 5.0.0 + 
 
 
 ## More Information
