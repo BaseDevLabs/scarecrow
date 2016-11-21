@@ -7,14 +7,9 @@ Currently it only includes the responsive menu, that contains only top level lin
 Expect a rewrite of the SASS at some point.
 
 ```
-assets/sass
-```
-Contains the SASS for compiling.
-
-```
 html/stylesheets
 ```
-Contains the compiled stylesheets.Contains
+Contains the compiled stylesheets.
 
 ```
 html/index.html
